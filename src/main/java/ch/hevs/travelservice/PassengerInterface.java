@@ -9,6 +9,7 @@ import ch.hevs.businessobject.Passenger;
 @Local
 public interface PassengerInterface {
 
-public List<Passenger> displayAllPassenger();
+
+public List<Passenger> getPassenger();
 	
 }

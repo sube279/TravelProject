@@ -12,7 +12,7 @@ public class Passenger {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private String name;
-	private String surname;
+	private String firstname;
 	
 	//RELATION
 	
@@ -22,10 +22,10 @@ public class Passenger {
 		
 	}
 	
-	public Passenger(String name, String surname)
+	public Passenger(String name, String firstname)
 	{
 		this.name=name;
-		this.surname=surname;
+		this.firstname=firstname;
 	}
 
 	//GETTER-SETTER
@@ -40,14 +40,14 @@ public class Passenger {
 		this.name = name;
 	}
 
-	public String getSurname() 
+	public String getFirstname() 
 	{
-		return surname;
+		return firstname;
 	}
 
-	public void setSurname(String surname) 
+	public void setFirstname(String firstname) 
 	{
-		this.surname = surname;
+		this.firstname = firstname;
 	}
 	
 

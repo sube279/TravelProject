@@ -11,14 +11,21 @@ import ch.hevs.businessobject.Passenger;
 @Stateless
 public class PassengerBean implements PassengerInterface{
 
-	@PersistenceContext(name = "PassengerPU")
+	@PersistenceContext(name = "travelPU")
 	private EntityManager em;
+	private List<Passenger> passengers;
 
-	public List<Passenger> displayAllPassenger() {
-		List<Passenger> listAllPassenger = (List<Passenger>) em.createQuery("Select * FROM Passenger").getResultList();
-		return listAllPassenger;
+	
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Passenger> getPassenger() {
+		passengers = (List<Passenger>) em.createQuery("FROM Passenger").getResultList();
+		return passengers;
 	}
+	
+	
 
-
+	
 
 }

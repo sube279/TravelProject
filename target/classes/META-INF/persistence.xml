@@ -5,8 +5,13 @@
                 http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 	version="1.0">
 
-	<persistence-unit name="bankPU">
+	<persistence-unit name="travelPU">
 		<jta-data-source>java:/labsDS</jta-data-source>
+		<class>ch.hevs.businessobject.Airport</class>
+		<class>ch.hevs.businessobject.Departure</class>
+		<class>ch.hevs.businessobject.Destination</class>
+		<class>ch.hevs.businessobject.Flight</class>
+		<class>ch.hevs.businessobject.Passenger</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" /> 
