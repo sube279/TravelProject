@@ -14,6 +14,16 @@
 		<managed-bean-class>ch.hevs.managedbeans.ActionBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>airportManagedBean</managed-bean-name>
+		<managed-bean-class>ch.hevs.managedbeans.AirportManagedBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>flightManagedBean</managed-bean-name>
+		<managed-bean-class>ch.hevs.managedbeans.FlightManagedBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 	<navigation-rule>
 		<display-name>welcomeBank.xhtml</display-name>
 		<from-view-id>/welcomeBank.xhtml</from-view-id>

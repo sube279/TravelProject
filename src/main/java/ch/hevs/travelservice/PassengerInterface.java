@@ -10,6 +10,6 @@ import ch.hevs.businessobject.Passenger;
 public interface PassengerInterface {
 
 
-public List<Passenger> getPassenger();
-	
+	public List<Passenger> getPassenger();
+
 }

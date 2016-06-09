@@ -17,7 +17,7 @@ public class Airport {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int idAirport;
-	private String airportCode;
+	private String airportcode;
 	private String country;
 	private String location;
 
@@ -30,7 +30,7 @@ public class Airport {
 	}
 	public Airport(String airportCode, String country, String location)
 	{
-		this.airportCode = airportCode;
+		this.airportcode = airportCode;
 		this.country=country;
 		this.location=location;
 	}
@@ -47,14 +47,14 @@ public class Airport {
 		this.idAirport = idAirport;
 	}
 	
-	public String getAirportCode() 
+	public String getAirportcode() 
 	{
-		return airportCode;
+		return airportcode;
 	}
 	
-	public void setAirportCode(String airportCode) 
+	public void setAirportcode(String airportCode) 
 	{
-		this.airportCode = airportCode;
+		this.airportcode = airportCode;
 	}
 	
 	public String getCountry() 
