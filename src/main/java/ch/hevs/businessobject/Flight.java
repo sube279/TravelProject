@@ -17,6 +17,7 @@ public class Flight {
 	//VARIABLE
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private Long id;
 	private String company;
 	private String flightNbr;
 	private int capacite;

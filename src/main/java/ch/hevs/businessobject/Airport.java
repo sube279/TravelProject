@@ -16,6 +16,7 @@ public class Airport {
 	//VARIABLE
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private Long id;
 	private int idAirport;
 	private String airportcode;
 	private String country;
