@@ -1,0 +1,2 @@
+Lien pour le projet : 
+http://localhost:8080/DreamTravel-0.0.1-SNAPSHOT/faces/welcome.xhtml

@@ -29,25 +29,23 @@ public class Destination extends Airport {
 	}
 
 	//GETTER-SETTER
-	public String getFlightDate() 
-	{
+	public String getFlightDate() {
 		return flightDate;
 	}
 
-	public void setFlightDate(String flightDate) 
-	{
+	public void setFlightDate(String flightDate) {
 		this.flightDate = flightDate;
 	}
 
-	public String getDestinationTime() 
-	{
+	public String getDestinationTime() {
 		return destinationTime;
 	}
 
-	public void setDestinationTime(String destinationTime) 
-	{
+	public void setDestinationTime(String destinationTime) {
 		this.destinationTime = destinationTime;
 	}
+
+
 	
 	
 	
