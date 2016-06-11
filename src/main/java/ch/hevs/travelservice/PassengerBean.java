@@ -1,5 +1,6 @@
 package ch.hevs.travelservice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -16,14 +17,35 @@ public class PassengerBean implements PassengerInterface{
 
 	@PersistenceContext(name = "travelPU")
 	private EntityManager em;
+	private List<Passenger> listAllPassenger;
+	
 	private List<Passenger> passengers;
 
 	
+	@SuppressWarnings("unchecked")
+	public List<Passenger> displayListPassenger()
+	{
+		listAllPassenger = (List<Passenger>) em.createQuery("FROM Passenger").getResultList();
+		System.out.println(listAllPassenger.size()+ " COUCOU ICI BOJUOR");
+		return listAllPassenger;
+	}
+
+
+	public List<Passenger> getPassengers() {
+		return passengers;
+	}
+
+
+	public void setPassengers(List<Passenger> passengers) {
+		this.passengers = passengers;
+	}
 	
+	
+	/*
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Passenger> getPassenger() {
-		passengers = (List<Passenger>) em.createQuery("FROM Passenger").getResultList();
+	public ArrayList<Passenger> getPassenger() {
+		passengers = (ArrayList<Passenger>) em.createQuery("FROM Passenger").getResultList();
 		return passengers;
 	}
 
@@ -47,7 +69,7 @@ public class PassengerBean implements PassengerInterface{
 		}
 	}
 	
-	
+	*/
 
 	
 

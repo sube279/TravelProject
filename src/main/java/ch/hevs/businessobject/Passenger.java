@@ -29,7 +29,7 @@ public class Passenger {
 	{
 		this.name=name;
 		this.firstname=firstname;
-		//this.flights = new HashSet<Flight>(); //Ajouter au passer une liste de vol
+		this.flights = new HashSet<Flight>(); //Ajouter au passer une liste de vol
 		
 	}
 
