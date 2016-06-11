@@ -6,6 +6,7 @@
 	version="1.0">
 
 	<persistence-unit name="travelPU">
+		<jta-data-source>java:/labsDS</jta-data-source>
 		<class>ch.hevs.businessobject.Airport</class>
 		<class>ch.hevs.businessobject.Departure</class>
 		<class>ch.hevs.businessobject.Destination</class>

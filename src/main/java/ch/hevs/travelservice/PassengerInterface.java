@@ -1,17 +1,19 @@
 package ch.hevs.travelservice;
 
-import java.util.List;
+import java.util.*;
 
 import javax.ejb.Local;
 
 import ch.hevs.businessobject.Passenger;
 
+
+
 @Local
 public interface PassengerInterface {
 
 
-	public List<Passenger> getPassenger();
+	public List<Passenger> displayListPassenger();
 	
-	public boolean addPassenger(Passenger p);
+
 
 }
