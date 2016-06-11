@@ -8,8 +8,8 @@ import ch.hevs.businessobject.Airport;
 
 @Local
 public interface  AirportInterface {
-
-	public List<Airport> getAirport();
-	
+/*
+	public List getAirport();
+	*/
 	
 }

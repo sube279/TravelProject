@@ -1,15 +1,8 @@
 package ch.hevs.businessobject;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Flight {
@@ -17,10 +10,10 @@ public class Flight {
 	//VARIABLE
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Long id;
+	private int id;
 	private String company;
-	private String flightNbr;
-	private int capacite;
+	private String flightnbr;
+	private int capacity;
 	
 	//RELATION
 	@ManyToMany(mappedBy ="flights", cascade = CascadeType.ALL)
@@ -29,6 +22,8 @@ public class Flight {
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Departure departure;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Destination destination;
 	//CONSTRUCTOR
 	public Flight()
 	{
@@ -39,8 +34,8 @@ public class Flight {
 	public Flight(String company, String flightNbr, int capacite)
 	{
 		this.company=company;
-		this.flightNbr=flightNbr;
-		this.capacite=capacite;
+		this.flightnbr=flightNbr;
+		this.capacity=capacite;
 		this.passengers = new HashSet<Passenger>();
 	}
 
@@ -54,20 +49,20 @@ public class Flight {
 		this.company = company;
 	}
 
-	public String getFlightNbr() {
-		return flightNbr;
+	public String getFlightnbr() {
+		return flightnbr;
 	}
 
-	public void setFlightNbr(String flightNbr) {
-		this.flightNbr = flightNbr;
+	public void setFlightnbr(String flightNbr) {
+		this.flightnbr = flightNbr;
 	}
 
 	public int getCapacite() {
-		return capacite;
+		return capacity;
 	}
 
 	public void setCapacite(int capacite) {
-		this.capacite = capacite;
+		this.capacity = capacite;
 	}
 
 	public Set<Passenger> getPassengers() {
@@ -85,7 +80,36 @@ public class Flight {
 	public void setDeparture(Departure departure) {
 		this.departure = departure;
 	}
+	
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+
+	public Destination getDestination() {
+		return destination;
+	}
+
+	public void setDestination(Destination destination) {
+		this.destination = destination;
+	}
+
+	public void addPassenger(Passenger p)
+	{
+		passengers.add(p);
+	}
+	
 	
 	
 

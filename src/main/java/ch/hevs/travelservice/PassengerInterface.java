@@ -11,5 +11,7 @@ public interface PassengerInterface {
 
 
 	public List<Passenger> getPassenger();
+	
+	public boolean addPassenger(Passenger p);
 
 }

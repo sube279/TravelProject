@@ -9,7 +9,7 @@ import ch.hevs.businessobject.Airport;
 @Local
 public interface FlightInterface {
 
-
+public List getFlight();
 	
 	
 	

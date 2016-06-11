@@ -1,14 +1,8 @@
 package ch.hevs.businessobject;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 @Entity
 public class Passenger {
@@ -16,7 +10,7 @@ public class Passenger {
 	//VARIABLE
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Long id;
+	private int id;
 	private String name;
 	private String firstname;
 	
@@ -35,7 +29,7 @@ public class Passenger {
 	{
 		this.name=name;
 		this.firstname=firstname;
-		this.flights = new HashSet<Flight>(); //Ajouter au passer une liste de vol
+		//this.flights = new HashSet<Flight>(); //Ajouter au passer une liste de vol
 		
 	}
 
@@ -66,6 +60,10 @@ public class Passenger {
 	}
 
 
+	public void addFlight(Flight f)
+	{
+		flights.add(f);
+	}
 	
 
 	

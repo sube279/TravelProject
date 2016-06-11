@@ -1,81 +1,68 @@
 package ch.hevs.businessobject;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
-//METHOD OF INHERITANCE - A VOIR SI ON VEUT PRENDRE UNE AUTRE
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) 
 @Entity
 public class Airport {
 
-
+	
 	//VARIABLE
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Long id;
-	private int idAirport;
-	private String airportcode;
+	private Long idAirport;
+	private String airportCode;
 	private String country;
 	private String location;
-
-	//RELATION
 	
 	//CONSTRUCTOR
 	public Airport()
 	{
-
+		
 	}
+	
 	public Airport(String airportCode, String country, String location)
 	{
-		this.airportcode = airportCode;
+		this.airportCode=airportCode;
 		this.country=country;
 		this.location=location;
 	}
 
-
-	//GETTER - SETTER
-	public int getIdAirport() 
-	{
+	
+	
+	//GETTER-SETTER
+	public Long getIdAirport() {
 		return idAirport;
 	}
-	
-	public void setIdAirport(int idAirport) 
-	{
+
+	public void setIdAirport(Long idAirport) {
 		this.idAirport = idAirport;
 	}
-	
-	public String getAirportcode() 
-	{
-		return airportcode;
+
+	public String getAirportCode() {
+		return airportCode;
 	}
-	
-	public void setAirportcode(String airportCode) 
-	{
-		this.airportcode = airportCode;
+
+	public void setAirportCode(String airportCode) {
+		this.airportCode = airportCode;
 	}
-	
-	public String getCountry() 
-	{
+
+	public String getCountry() {
 		return country;
 	}
-	
-	public void setCountry(String country) 
-	{
+
+	public void setCountry(String country) {
 		this.country = country;
 	}
-	
-	public String getLocation() 
-	{
+
+	public String getLocation() {
 		return location;
 	}
-	
-	public void setLocation(String location) 
-	{
+
+	public void setLocation(String location) {
 		this.location = location;
 	}
 
+	
+	
 }

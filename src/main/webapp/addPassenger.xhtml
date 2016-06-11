@@ -1,0 +1,30 @@
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:define name="content">
+
+		<h1 align="center">Add a New Passenger</h1>
+		<h:form>
+    Name : <h:inputText id="nameBox"
+				value="#{actionBean.name}" required="true"
+				requiredMessage="Put a name" />
+			<br />
+    Surname : <h:inputText id="surnameBox"
+				value="#{actionBean.surname}" required="true"
+				requiredMessage="Put a surname" />
+			<br />
+			<h:message for="nicknameBox"></h:message>
+			<br />
+			<h:message for="surnameBox"></h:message>
+			<br />
+			
+			<h:commandButton action="#{actionBean.addPassenger}"
+				value="Add Passenger"></h:commandButton>
+			<br />
+			<h:outputText value="#{actionBean.passengerValide}"></h:outputText>
+		</h:form>
+	</ui:define>
+</ui:composition>

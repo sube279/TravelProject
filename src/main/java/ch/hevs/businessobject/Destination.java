@@ -1,31 +1,33 @@
 package ch.hevs.businessobject;
 
-import javax.persistence.Entity;
+import java.util.Set;
 
+import javax.persistence.*;
 
 @Entity
 public class Destination extends Airport {
 
+
 	//VARIABLE
 	private String flightDate;
 	private String destinationTime;
-	
-	
+
 	//RELATION ?? 
-	
-	
+	@OneToMany(mappedBy ="destination", cascade = CascadeType.ALL)
+	private Set<Flight> flights;
+
 	//CONSTRUCTOR
 	public Destination()
 	{
-		
+
 	}
-	
+
 	public Destination(String airportCode, String country, String location, String flightDate, String destinationTime)
 	{
 		super(airportCode,country,location);
 		this.flightDate=flightDate;
 		this.destinationTime=destinationTime;
-		
+
 	}
 
 	//GETTER-SETTER
@@ -46,7 +48,11 @@ public class Destination extends Airport {
 	}
 
 
-	
-	
-	
+	public void addDestination(Flight f)
+	{
+		this.flights.add(f);
+		f.setDestination(this);
+	}
+
+
 }

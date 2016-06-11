@@ -7,6 +7,9 @@
 	<ui:define name="content">
 
 		<h1 align="center">All Passenger</h1>
+		
+		<h:commandButton action="addPassenger" value="Add New Passenger" />
+		
 		<h:form>
 			<h:dataTable class="table table-striped"
 				value="#{actionBean.allPassenger}" var="s">

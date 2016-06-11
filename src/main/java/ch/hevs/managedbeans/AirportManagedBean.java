@@ -1,28 +1,31 @@
 package ch.hevs.managedbeans;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.ejb.EJB;
 
 import ch.hevs.businessobject.Airport;
-
 import ch.hevs.travelservice.AirportInterface;
 
+
+
 public class AirportManagedBean {
-	
+/*	
 	//VARIABLE
 	private String airportcode;
 	private String country;
 	private String location;
 	
-	public ArrayList<Airport> allairports;
+	public List<Airport> allairports;
 	
 	@EJB
 	private AirportInterface airport;
 	
-	public ArrayList<Airport> getAllAirports()
+	
+	public List<Airport> getAllAirports()
 	{
-		allairports = (ArrayList<Airport>) airport.getAirport();
+		allairports = airport.getAirport();
 		return allairports;
 	}
 
@@ -52,7 +55,8 @@ public class AirportManagedBean {
 		this.location = location;
 	}
 
-	public ArrayList<Airport> getAllairports() {
+	public List<Airport> getAllairports() {
+		allairports = airport.getAirport();
 		return allairports;
 	}
 
@@ -68,7 +72,7 @@ public class AirportManagedBean {
 		this.airport = airport;
 	}
 	
-
+*/
 	
 	
 	
